@@ -1,5 +1,9 @@
 <html>
+    
+    <script type="application/javascript" src="sentences.js"></script>
     <script type="application/javascript" src="WCG1Script.js"></script>
+    
+        
 <head>
     <title>WC Gameplay 1</title>
     
@@ -7,13 +11,12 @@
         
         header {
             padding: 1em;
-            color: white;
             background-color: #7BAFD4;
             clear: left;
             text-align: center;
         }
         
-        table{
+        table {
             width: 100%;
             height: 75%;
             border: 1px solid black;
@@ -23,9 +26,8 @@
 </head>   
 
     
-<header>
-   <h1>WordCatcher Gameplay 1: one degree of freedom</h1>
-    <h2>Sentence goes here</h2>
+<header id="gameHeader">
+    <h1>Sentence goes here</h1>
 </header>
     
 <body>
@@ -33,17 +35,21 @@
  
   <table id="myTable">
   <colgroup>
-    <col id="leftCol" style="background-color:white">
-    <col id="midCol" style="background-color:#7BAFD4">
-    <col id="rightCol" style="background-color:white">
+    <col id="leftCol" style="background-color:white" width="1000"><!--width doesn't work in html5?-->
+    <col id="midCol" style="background-color:#7BAFD4" width="1000">
+    <col id="rightCol" style="background-color:white" width="1000">
   </colgroup>
   <tr>
-    <th>Word 1</th>
-    <th>Word 2</th>
-    <th>Word 3</th>
+    <th>word1</th>
+    <th>word2</th>
+    <th>word3</th>
   </tr>
 </table>
     
     
 </body>
+    
+    <script>
+        init(numSents, sents);
+    </script>
 </html>
