@@ -56,7 +56,7 @@ var sents = [    //array of sentences, note that part1 ends with space and part2
     {part1:"She ", part2:" two toffees already.", w1:"had", w2:"has", w3:"have", correct:"had"},
     {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have"},
     {part1:"I was jealous that David ", part2:" three balloons.", w1:"has", w2:"have", w3:"had", correct:"has"},
-    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"},
+    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"}
 
            ];
 
