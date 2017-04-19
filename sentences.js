@@ -3,7 +3,7 @@ var numSents = 50;//number of sentences
 var sents = [    //array of sentences, note that part1 ends with space and part2 starts with a space
         //vocab easy?
     {part1:"Yesterday, the dog ", part2:" around in the park.", w1:"ran", w2:"barked", w3:"fluffy", correct:"ran"},
-    {part1:"Tomorrow, I will ", part2:" all of my homework.", w1:"complicated", w2:"complete", w3:"compare", correct:"complete"}
+    {part1:"Tomorrow, I will ", part2:" all of my homework.", w1:"complicated", w2:"complete", w3:"compare", correct:"complete"},
     {part1:"Katie is a ", part2:" dancer.", w1:"graceful", w2:"run", w3:"annoy", correct:"graceful"},
     {part1:"The red apple is ", part2:" on that tree.", w1:"growing", w2:"grew", w3:"grow", correct:"growing"},
     {part1:"The children are ", part2:" in the playground.", w1:"eat", w2:"playing", w3:"sound", correct:"playing"},
@@ -56,7 +56,7 @@ var sents = [    //array of sentences, note that part1 ends with space and part2
     {part1:"She ", part2:" two toffees already.", w1:"had", w2:"has", w3:"have", correct:"had"},
     {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have"},
     {part1:"I was jealous that David ", part2:" three balloons.", w1:"has", w2:"have", w3:"had", correct:"has"},
-    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"},
+    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"}
 
            ];
 
