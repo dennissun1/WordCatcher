@@ -1,0 +1,2 @@
+start from title.html, everything else should be click through
+I created a separate html file for each possible menu
