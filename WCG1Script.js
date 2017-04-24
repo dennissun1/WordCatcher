@@ -3,6 +3,7 @@ var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
 var score = 10;
 var background = new Audio("background.mp3");
+var keypress = new Audio("click.mp3");
 
 
 function dealWithKeyboard(e) {
