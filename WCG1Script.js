@@ -1,6 +1,7 @@
-window.addEventListener("keyup", dealWithKeyboard, false)
-var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"}
+window.addEventListener("keyup", dealWithKeyboard, false);
+var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
+var score = 10;
 
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
@@ -43,6 +44,9 @@ function dealWithKeyboard(e) {
         if(hlitedCol.name == "rightCol") {
             if(s[rng].w3 == s[rng].correct) {
                 alert("correct!");
+                //score+=10;
+                alert("hi");
+                document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
@@ -52,7 +56,7 @@ function dealWithKeyboard(e) {
 }
 
 function init(num, s) {//initializes total_num_sents on the first run
-    total_num_sents = num;
+    total_num_sents = num;›
     this.s = s;
     loadSentence();
 }
