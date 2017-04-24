@@ -2,6 +2,8 @@ window.addEventListener("keyup", dealWithKeyboard, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
 var score = 10;
+var keypress = new Audio();
+keypress = "click.mp3";
 
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
@@ -13,9 +15,7 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.left;
         hlitedCol.left=hlitedCol.right;
         hlitedCol.right=temp;
-        var background = new Audio();
-        background.src = "background.mp3";
-        background.play();
+               
     }
     if(e.keyCode == 39) {//right arrowkey
         document.getElementById(hlitedCol.right).style="background-color:#7BAFD4";
@@ -58,7 +58,7 @@ function dealWithKeyboard(e) {
 }
 
 function init(num, s) {//initializes total_num_sents on the first run
-    total_num_sents = num;›
+    total_num_sents = num;
     this.s = s;
     loadSentence();
 }
