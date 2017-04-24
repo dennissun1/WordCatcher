@@ -57,15 +57,18 @@ var vocabHard = [
 
 var GNNumSents = 3;
 var grammarNorm = [
-    {part1:"She ", part2:" two toffees already.", w1:"had", w2:"has", w3:"have", correct:"had"},
-    {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have"},
-    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"}
+    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"}, 
+    {part1:"The red apple is ", part2:" on that tree.", w1:"growing", w2:"grew", w3:"grow", correct:"growing"}, 
+    {part1:"", part2:" late for class today.", w1:"your", w2:"you're", w3:"you", correct:"you're"},
+
     ];
 
-var GHNumSents = 2;
+var GHNumSents = 3;
 var grammarHard = [
     {part1:"I was jealous that David ", part2:" three balloons.", w1:"has", w2:"have", w3:"had", correct:"had"},
-    {part1:"The red apple is ", part2:" on that tree.", w1:"growing", w2:"grew", w3:"grow", correct:"growing"}
+    {part1:"She ", part2:" two toffees already.", w1:"had", w2:"has", w3:"have", correct:"had"},
+    {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have"},
+
     ];
 
 
