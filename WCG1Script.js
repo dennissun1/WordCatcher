@@ -15,7 +15,7 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.left;
         hlitedCol.left=hlitedCol.right;
         hlitedCol.right=temp;
-               
+        keypress.play();
     }
     if(e.keyCode == 39) {//right arrowkey
         document.getElementById(hlitedCol.right).style="background-color:#7BAFD4";
@@ -25,6 +25,7 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.right;
         hlitedCol.right=hlitedCol.left;
         hlitedCol.left=temp;
+        keypress.play();
     }
     if(e.keyCode == 13) {//enter key
         if(hlitedCol.name == "leftCol") {
