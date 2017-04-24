@@ -15,6 +15,7 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.left;
         hlitedCol.left=hlitedCol.right;
         hlitedCol.right=temp;
+        var keypress = new Audio("click.mp3");
         keypress.play();
     }
     if(e.keyCode == 39) {//right arrowkey
@@ -25,6 +26,7 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.right;
         hlitedCol.right=hlitedCol.left;
         hlitedCol.left=temp;
+        var keypress = new Audio("click.mp3");
         keypress.play();
     }
     if(e.keyCode == 13) {//enter key
