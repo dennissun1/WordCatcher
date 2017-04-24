@@ -2,6 +2,14 @@ window.addEventListener("keyup", dealWithKeyboard, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
 var score = 0;
+var background = new Audio("background.mp3");
+var keypress = new Audio("click.mp3");
+var correct = new Audio("correct.mp3");
+var wrong = new Audio("wrong.mp3");
+
+=======
+
+
 
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
@@ -13,6 +21,9 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.left;
         hlitedCol.left=hlitedCol.right;
         hlitedCol.right=temp;
+
+        var keypress = new Audio("click.mp3");
+        keypress.play();
     }
     if(e.keyCode == 39) {//right arrowkey
         document.getElementById(hlitedCol.right).style="background-color:#7BAFD4";
@@ -22,37 +33,64 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.right;
         hlitedCol.right=hlitedCol.left;
         hlitedCol.left=temp;
+        var keypress = new Audio("click.mp3");
+        keypress.play();
     }
     if(e.keyCode == 13) {//enter key
         if(hlitedCol.name == "leftCol") {
             if(s[rng].w1 == s[rng].correct) {
+                var correct = new Audio("correct.mp3");
+                correct.play();
                 alert("correct!");
+
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
+
                 loadSentence(); 
             }
-            else
+            else {
+                var wrong = new Audio("wrong.mp3");
+                wrong.play();
                 alert("try again")
+                
+            }
         }
         if(hlitedCol.name == "midCol") {
             if(s[rng].w2 == s[rng].correct) {
+                var correct = new Audio("correct.mp3");
+                correct.play();
                 alert("correct!");
+
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
+
                 loadSentence(); 
             }
-            else
+            else {
+                 var wrong = new Audio("wrong.mp3");
+            wrong.play();
                 alert("try again")
+           
+            }
         }
         if(hlitedCol.name == "rightCol") {
             if(s[rng].w3 == s[rng].correct) {
+                var correct = new Audio("correct.mp3");
+                correct.play();
                 alert("correct!");
+
+
                 score+=10;
+
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
-            else
+            else {
+                var wrong = new Audio("wrong.mp3");
+            wrong.play();
                 alert("try again")
+            
+            }
         }
     }
 }
@@ -61,6 +99,7 @@ function init(num, s) {//initializes total_num_sents on the first run
     total_num_sents = num;
     this.s = s;
     loadSentence();
+    background.play();
 }
 
 function loadSentence() {//updates webpage with new sentence
