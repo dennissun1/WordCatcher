@@ -1,11 +1,14 @@
 window.addEventListener("keyup", dealWithKeyboard, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
-var score = 10;
+var score = 0;
 var background = new Audio("background.mp3");
 var keypress = new Audio("click.mp3");
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
+
+=======
+
 
 
 function dealWithKeyboard(e) {
@@ -18,6 +21,7 @@ function dealWithKeyboard(e) {
         hlitedCol.name=hlitedCol.left;
         hlitedCol.left=hlitedCol.right;
         hlitedCol.right=temp;
+
         var keypress = new Audio("click.mp3");
         keypress.play();
     }
@@ -38,7 +42,10 @@ function dealWithKeyboard(e) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
                 alert("correct!");
-                
+
+                score+=10;
+                document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
+
                 loadSentence(); 
             }
             else {
@@ -53,7 +60,10 @@ function dealWithKeyboard(e) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
                 alert("correct!");
-                
+
+                score+=10;
+                document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
+
                 loadSentence(); 
             }
             else {
@@ -68,9 +78,10 @@ function dealWithKeyboard(e) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
                 alert("correct!");
-                
-                //score+=10;
-                alert("hi");
+
+
+                score+=10;
+
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
