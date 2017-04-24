@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>WordCatcher</title>
-		<script type="text/javascript" src = "script.js"></script>
-	</head>
 	<style>
 	.button {
 		background-color: #7BAFD4;
 		border: none;
+		border-radius: 12px;
 		color: black;
 		padding: 20px 32px;
 		text-align: center;
@@ -16,24 +13,64 @@
 		font size: 16px;
 		margin: 4px 2px;
 		cursor: pointer;
+		
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
 	}
 	.button1 {padding: 10px 24px;}
 	.button2 {padding: 10px 24px;}
+		
+	.center{
+		margin: auto;
+		width: 15%;
+	}
+	
+	h1.sansserif{
+		font-family: Quicksand;
+		font-size: 50px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;	
+		margin: auto;
+		width:90%;
+		text-align: center;
+	}
+	p.sansserif{
+		font-family: Quicksand;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
+		text-align: center;
+	}
 	</style>
+	
+	<head>
+		<title>WordCatcher</title>
+		<script type="text/javascript" src = "script.js"></script>
+	</head>
+
+	
 
 	<body>
+		<h1 class="sansserif">WordCatcher</h1>
+		<div class = "center">
 		
-		
-		<h1>WordCatcher</h1>
-		<p>Welcome to WordCatcher!</p>
-		<p>Choose Degrees of Freedom</p>
+		<p class = "sansserif">Welcome to WordCatcher!</p>
+		<p class = "sansserif">Choose Degrees of Freedom</p>
 		<form action="twodegrees.html">
 			<button class="button button1">Two Degrees of Freedom
 			</button>
 		</form>
 		<form action="threedegrees.html">
-			<button type="submit">Three Degrees of Freedom</button>
+			<button class = "button button2">Three Degrees of Freedom</button>
 		</form>
-
+		</div>
 	</body>
 </html>
