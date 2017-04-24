@@ -35,42 +35,51 @@ function dealWithKeyboard(e) {
     if(e.keyCode == 13) {//enter key
         if(hlitedCol.name == "leftCol") {
             if(s[rng].w1 == s[rng].correct) {
-                alert("correct!");
                 var correct = new Audio("correct.mp3");
                 correct.play();
+                alert("correct!");
+                
                 loadSentence(); 
             }
-            else
-                alert("try again")
+            else {
                 var wrong = new Audio("wrong.mp3");
                 wrong.play();
+                alert("try again")
+                
+            }
         }
         if(hlitedCol.name == "midCol") {
             if(s[rng].w2 == s[rng].correct) {
-                alert("correct!");
                 var correct = new Audio("correct.mp3");
                 correct.play();
+                alert("correct!");
+                
                 loadSentence(); 
             }
-            else
-                alert("try again")
-            var wrong = new Audio("wrong.mp3");
+            else {
+                 var wrong = new Audio("wrong.mp3");
             wrong.play();
+                alert("try again")
+           
+            }
         }
         if(hlitedCol.name == "rightCol") {
             if(s[rng].w3 == s[rng].correct) {
-                alert("correct!");
                 var correct = new Audio("correct.mp3");
                 correct.play();
+                alert("correct!");
+                
                 //score+=10;
                 alert("hi");
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
-            else
-                alert("try again")
-            var wrong = new Audio("wrong.mp3");
+            else {
+                var wrong = new Audio("wrong.mp3");
             wrong.play();
+                alert("try again")
+            
+            }
         }
     }
 }
