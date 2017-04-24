@@ -4,6 +4,8 @@ var s, total_num_sents, rng;
 var score = 10;
 var background = new Audio("background.mp3");
 var keypress = new Audio("click.mp3");
+var correct = new Audio("correct.mp3");
+var wrong = new Audio("wrong.mp3");
 
 
 function dealWithKeyboard(e) {
@@ -34,6 +36,8 @@ function dealWithKeyboard(e) {
         if(hlitedCol.name == "leftCol") {
             if(s[rng].w1 == s[rng].correct) {
                 alert("correct!");
+                var correct = new Audio("correct.mp3");
+                correct.play();
                 loadSentence(); 
             }
             else
@@ -42,6 +46,8 @@ function dealWithKeyboard(e) {
         if(hlitedCol.name == "midCol") {
             if(s[rng].w2 == s[rng].correct) {
                 alert("correct!");
+                var correct = new Audio("correct.mp3");
+                correct.play();
                 loadSentence(); 
             }
             else
@@ -50,6 +56,8 @@ function dealWithKeyboard(e) {
         if(hlitedCol.name == "rightCol") {
             if(s[rng].w3 == s[rng].correct) {
                 alert("correct!");
+                var correct = new Audio("correct.mp3");
+                correct.play();
                 //score+=10;
                 alert("hi");
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
