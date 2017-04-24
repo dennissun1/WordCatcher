@@ -42,6 +42,8 @@ function dealWithKeyboard(e) {
             }
             else
                 alert("try again")
+                var wrong = new Audio("wrong.mp3");
+                wrong.play();
         }
         if(hlitedCol.name == "midCol") {
             if(s[rng].w2 == s[rng].correct) {
@@ -52,6 +54,8 @@ function dealWithKeyboard(e) {
             }
             else
                 alert("try again")
+            var wrong = new Audio("wrong.mp3");
+            wrong.play();
         }
         if(hlitedCol.name == "rightCol") {
             if(s[rng].w3 == s[rng].correct) {
@@ -65,6 +69,8 @@ function dealWithKeyboard(e) {
             }
             else
                 alert("try again")
+            var wrong = new Audio("wrong.mp3");
+            wrong.play();
         }
     }
 }
