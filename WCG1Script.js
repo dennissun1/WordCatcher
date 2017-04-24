@@ -7,9 +7,6 @@ var keypress = new Audio("click.mp3");
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
 
-=======
-
-
 
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
