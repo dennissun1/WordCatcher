@@ -2,8 +2,8 @@ window.addEventListener("keyup", dealWithKeyboard, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
 var score = 10;
-var keypress = new Audio();
-keypress = "click.mp3";
+var keypress = new Audio("click.mp3);
+
 
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
