@@ -55,7 +55,7 @@ function dealWithKeyboard(e) {
 }
 
 function init(num, s) {//initializes total_num_sents on the first run
-    total_num_sents = num;›
+    total_num_sents = num;
     this.s = s;
     loadSentence();
 }
