@@ -2,7 +2,7 @@ window.addEventListener("keyup", dealWithKeyboard, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
 var score = 10;
-var keypress = new Audio("click.mp3");
+var background = new Audio("background.mp3");
 
 
 function dealWithKeyboard(e) {
@@ -64,6 +64,7 @@ function init(num, s) {//initializes total_num_sents on the first run
     total_num_sents = num;
     this.s = s;
     loadSentence();
+    background.play();
 }
 
 function loadSentence() {//updates webpage with new sentence
