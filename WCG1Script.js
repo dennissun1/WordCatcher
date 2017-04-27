@@ -21,6 +21,14 @@ function dealWithKeyboard(e) {
 
         var keypress = new Audio("click.mp3");
         keypress.play();
+        
+        if(hlitedCol.name == "leftCol") {
+            textToSpeech(JSON.stringify(s[rng].w1));
+        } else if (hlitedCol.name == "rightCol") {
+            textToSpeech(JSON.stringify(s[rng].w3));
+        } else {
+            textToSpeech(JSON.stringify(s[rng].w2));
+        }
     }
     if(e.keyCode == 39) {//right arrowkey
         document.getElementById(hlitedCol.right).style="background-color:#7BAFD4";
@@ -32,6 +40,14 @@ function dealWithKeyboard(e) {
         hlitedCol.left=temp;
         var keypress = new Audio("click.mp3");
         keypress.play();
+        
+        if(hlitedCol.name == "leftCol") {
+            textToSpeech(JSON.stringify(s[rng].w1));
+        } else if (hlitedCol.name == "rightCol") {
+            textToSpeech(JSON.stringify(s[rng].w3));
+        } else {
+            textToSpeech(JSON.stringify(s[rng].w2));
+        }
     }
     if(e.keyCode == 13) {//enter key
         if(hlitedCol.name == "leftCol") {
@@ -108,6 +124,13 @@ function loadSentence() {//updates webpage with new sentence
     var tt = JSON.stringify(t);
 
     textToSpeech(tt);
+     if(hlitedCol.name == "leftCol") {
+            textToSpeech(JSON.stringify(s[rng].w1));
+        } else if (hlitedCol.name == "rightCol") {
+            textToSpeech(JSON.stringify(s[rng].w3));
+        } else {
+            textToSpeech(JSON.stringify(s[rng].w2));
+        }
 }
 
 function textToSpeech(s)
