@@ -102,6 +102,21 @@ function init(num, s) {//initializes total_num_sents on the first run
 function loadSentence() {//updates webpage with new sentence
     rng = Math.floor((Math.random() * total_num_sents)); //random int from 0 to # of sentences-1
     document.getElementById("gameHeader").innerHTML = "<h1>"+s[rng].part1+"_____"+s[rng].part2+"</h1>";
+    var t = s[rng].part1+"_____"+s[rng].part2;
     document.getElementById("myTable").rows[0].innerHTML = "<th>"+s[rng].w1+"</th><th>"+s[rng].w2+"</th><th>"+s[rng].w3+"</th>";
+
+    var tt = JSON.stringify(t);
+
+    textToSpeech(tt);
+}
+
+function textToSpeech(s)
+{
+    var msg = new SpeechSynthesisUtterance();
+     msg.text = s;
+     msg.lang = 'en-US';
+     msg.rate = 1.0;
+    
+     speechSynthesis.speak(msg);
 }
 
