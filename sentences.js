@@ -25,19 +25,16 @@ var vocab = [    //array of sentences, note that part1 ends with space and part2
 
 var GNNumSents = 10;
 var grammar = [
-    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and"}, 
-    {part1:"The red apple is ", part2:" on that tree.", w1:"growing", w2:"grew", w3:"grow", correct:"growing"}, 
-
-    {part1:"", part2:" late for class today.", w1:"Your", w2:"You're", w3:"You", correct:"You're"},
-    {part1:"", part2:" not your turn yet.", w1:"It's", w2:"Its", w3:"It", correct:"It's"},
-    {part1:"The cat was licking ", part2:" tail.", w1:"it is", w2:"it", w3:"its", correct:"its"},
- 
-    {part1:"I was jealous that David ", part2:" three balloons.", w1:"has", w2:"have", w3:"had", correct:"had"},
-    {part1:"She ", part2:" two toffees already.", w1:"had", w2:"has", w3:"have", correct:"had"},
-    {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have"},
-
-    {part1:"She ", part2:" his offer to drive her home.", w1:"accepted", w2:"excepted", w3:"exempted", correct:"accepted"},
-    {part1:"There was a big storm with thunder and ", part2:".", w1:"lighting", w2:"lightening", w3:"lightning", correct:"lightning"}
+    {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and", explanation: "The correct answer is 'and'. Dogs are not a place and there are more than one."}, 
+    {part1:"The red apple is ", part2:" on that tree.", w1:"growing", w2:"grew", w3:"grow", correct:"growing", explanation: "The correct answer is 'growing'. The key word is 'is' it is in present tense."}, 
+    {part1:"", part2:" late for class today.", w1:"Your", w2:"You're", w3:"You", correct:"You're", explanation: "The correct answer is 'You're'. 'You are' makes sense here because it is not possessive."},
+    {part1:"", part2:" not your turn yet.", w1:"It's", w2:"Its", w3:"It", correct:"It's", explanation: "The correct answer is 'It's'. 'It is' makes sense here because it is not possessive."},
+    {part1:"The cat was licking ", part2:" tail.", w1:"it is", w2:"it", w3:"its", correct:"its", explanaiton: "The correct answer is 'its'. The tail is the cat's tail so we need a possessive 'its'."},
+    {part1:"I was jealous that David ", part2:" three balloons yesterday.", w1:"has", w2:"have", w3:"had", correct:"had", explanation: "The correct answer is 'had'. The key words are 'was' and 'yesterday'. We need a word for the past tense."},
+    {part1:"She ", part2:" two toffees already.", w1:"had", w2:"has", w3:"have", correct:"had", explanation: "The correct answer is 'had'. The key word 'already'. We need a word for the past tense."},
+    {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have", explanation: "The correct answer is 'have'. The key word is 'today'. We need a word for the present tense."},
+    {part1:"She ", part2:" his offer to drive her home.", w1:"accepted", w2:"excepted", w3:"exempted", correct:"accepted", explanation: "The correct answer is 'accepted'. 'Excepted' and 'exempted' have different meanings."},
+    {part1:"There was a big storm with thunder and ", part2:".", w1:"lighting", w2:"lightening", w3:"lightning", correct:"lightning", explanation: "The correct answer is 'lightning'. 'Lighting' and 'lightening' have different meanings."}
 
     ];
 
