@@ -13,7 +13,7 @@ window.requestAnimFrame = (function(){
 window.addEventListener("keyup", dealWithKeyboardUp, false);
 window.addEventListener("keydown", dealWithKeyboardDown, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
-var s, total_num_sents, rng, iter=1;
+var s, total_num_sents, rng, iter=-1;
 var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
