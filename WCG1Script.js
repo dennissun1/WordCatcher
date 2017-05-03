@@ -3,6 +3,7 @@ var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
 var s, total_num_sents, rng;
 var score = 0;
 var background = new Audio("background.mp3");
+background.volume = 0.03;
 var keypress = new Audio("click.mp3");
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
@@ -21,6 +22,14 @@ function dealWithKeyboard(e) {
 
         var keypress = new Audio("click.mp3");
         keypress.play();
+        
+        if(hlitedCol.name == "leftCol") {
+            textToSpeech(JSON.stringify(s[rng].w1));
+        } else if (hlitedCol.name == "rightCol") {
+            textToSpeech(JSON.stringify(s[rng].w3));
+        } else {
+            textToSpeech(JSON.stringify(s[rng].w2));
+        }
     }
     if(e.keyCode == 39) {//right arrowkey
         document.getElementById(hlitedCol.right).style="background-color:#7BAFD4";
@@ -32,13 +41,21 @@ function dealWithKeyboard(e) {
         hlitedCol.left=temp;
         var keypress = new Audio("click.mp3");
         keypress.play();
+        
+        if(hlitedCol.name == "leftCol") {
+            textToSpeech(JSON.stringify(s[rng].w1));
+        } else if (hlitedCol.name == "rightCol") {
+            textToSpeech(JSON.stringify(s[rng].w3));
+        } else {
+            textToSpeech(JSON.stringify(s[rng].w2));
+        }
     }
     if(e.keyCode == 13) {//enter key
         if(hlitedCol.name == "leftCol") {
             if(s[rng].w1 == s[rng].correct) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
-                alert("correct!");
+                //alert("correct!");
 
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
@@ -48,7 +65,7 @@ function dealWithKeyboard(e) {
             else {
                 var wrong = new Audio("wrong.mp3");
                 wrong.play();
-                alert("try again")
+                //alert("try again")
                 
             }
         }
@@ -56,7 +73,7 @@ function dealWithKeyboard(e) {
             if(s[rng].w2 == s[rng].correct) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
-                alert("correct!");
+                //alert("correct!");
 
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
@@ -66,7 +83,7 @@ function dealWithKeyboard(e) {
             else {
                  var wrong = new Audio("wrong.mp3");
             wrong.play();
-                alert("try again")
+                //alert("try again")
            
             }
         }
@@ -74,7 +91,7 @@ function dealWithKeyboard(e) {
             if(s[rng].w3 == s[rng].correct) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
-                alert("correct!");
+                //alert("correct!");
 
 
                 score+=10;
@@ -85,7 +102,7 @@ function dealWithKeyboard(e) {
             else {
                 var wrong = new Audio("wrong.mp3");
             wrong.play();
-                alert("try again")
+                //alert("try again")
             
             }
         }
@@ -102,12 +119,18 @@ function init(num, s) {//initializes total_num_sents on the first run
 function loadSentence() {//updates webpage with new sentence
     rng = Math.floor((Math.random() * total_num_sents)); //random int from 0 to # of sentences-1
     document.getElementById("gameHeader").innerHTML = "<h1>"+s[rng].part1+"_____"+s[rng].part2+"</h1>";
-    var t = s[rng].part1+"_____"+s[rng].part2;
+
     document.getElementById("myTable").rows[0].innerHTML = "<th>"+s[rng].w1+"</th><th>"+s[rng].w2+"</th><th>"+s[rng].w3+"</th>";
 
-    var tt = JSON.stringify(t);
+    textToSpeech(JSON.stringify(s[rng].part1+"_____"+s[rng].part2));
 
-    textToSpeech(tt);
+     if(hlitedCol.name == "leftCol") {
+            textToSpeech(JSON.stringify(s[rng].w1));
+        } else if (hlitedCol.name == "rightCol") {
+            textToSpeech(JSON.stringify(s[rng].w3));
+        } else {
+            textToSpeech(JSON.stringify(s[rng].w2));
+        }
 }
 
 function textToSpeech(s)
@@ -115,7 +138,7 @@ function textToSpeech(s)
     var msg = new SpeechSynthesisUtterance();
      msg.text = s;
      msg.lang = 'en-US';
-     msg.rate = 1.0;
+     msg.rate = 0.8;
     
      speechSynthesis.speak(msg);
 }
