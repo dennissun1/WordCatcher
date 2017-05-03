@@ -13,7 +13,7 @@ window.requestAnimFrame = (function(){
 window.addEventListener("keyup", dealWithKeyboardUp, false);
 window.addEventListener("keydown", dealWithKeyboardDown, false);
 var hlitedCol = {name:"midCol", left:"leftCol", right:"rightCol"};
-var s, total_num_sents, rng, iter=0;
+var s, total_num_sents, rng, iter=1;
 var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
@@ -136,6 +136,7 @@ function loadSentence() {//updates webpage with new sentence
         alert("insert score screen here");
     }
     rng = Math.floor((Math.random() * total_num_sents)); //random int from 0 to # of sentences-1
+    loadedSents[iter] = {sent:s[rng], isCorrect:true};
     document.getElementById("gameHeader").innerHTML = "<h1>"+s[rng].part1+"_____"+s[rng].part2+"</h1>";
     w1.innerHTML = "<h1>"+s[rng].w1+"</h1>";
     w2.innerHTML = "<h1>"+s[rng].w2+"</h1>";
