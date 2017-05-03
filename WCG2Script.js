@@ -18,11 +18,11 @@ var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
 var speed = 0.2;
-var loadedSents = new Array(10);
+var loadedSents = "";//really long string of wrong sentences - string array won't work well in localStorage
 
 
-var background = new Audio("background2.mp3");
-background.volume = 0.09;
+var background = new Audio("background.mp3");
+background.volume = 0.03;
 
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
@@ -48,6 +48,7 @@ function dealWithKeyboardDown(e) {
 }
 
 function init(num, s) {//initializes total_num_sents on the first run
+    background.play();
     total_num_sents = num;
     this.s = s;
     catcher = document.getElementById("catcher");
@@ -94,10 +95,13 @@ function checkCorrect() {
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
-            else
-
-               
+        else {
             wrong.play();
+        
+            loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+            loadSentence();   
+        }
     }
     if(x<=47 && x>=44-w2.clientWidth/screen.availWidth*100) {
         if(s[rng].w2 == s[rng].correct) {
@@ -106,11 +110,17 @@ function checkCorrect() {
 
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
+            
                 loadSentence(); 
             }
-            else
-
+        else {
             wrong.play();
+        
+            loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+            loadSentence();   
+        }
+                
     }
     if(x<=27 && x>=24-w3.clientWidth/screen.availWidth*100) {
         if(s[rng].w3 == s[rng].correct) {
@@ -121,26 +131,26 @@ function checkCorrect() {
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
-            else
-
-               
+        else {
             wrong.play();
-    } else {
-       
-
+        
+            loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+            loadSentence();   
+        }
     }
 }
 
 function loadSentence() {//updates webpage with new sentence
     iter++;
-    if(iter == 11) {
-        alert("insert score screen here");
+    if(iter == 10) {//11th iteration
+        localStorage.setItem("score", score);
+        localStorage.setItem("loadedSents", loadedSents);
+        window.location.href = "scoreScreen.html";
     }
     rng = Math.floor((Math.random() * total_num_sents)); //random int from 0 to # of sentences-1
-    loadedSents[iter] = {sent:s[rng], isCorrect:true};
     document.getElementById("gameHeader").innerHTML = "<h1>"+s[rng].part1+"_____"+s[rng].part2+"</h1>";
     w1.innerHTML = "<h1>"+s[rng].w1+"</h1>";
     w2.innerHTML = "<h1>"+s[rng].w2+"</h1>";
     w3.innerHTML = "<h1>"+s[rng].w3+"</h1>";
 }
-
