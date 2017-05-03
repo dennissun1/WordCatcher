@@ -18,6 +18,7 @@ var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
 var speed = 0.2;
+var loadedSents = new Array(10);
 
 
 var background = new Audio("background2.mp3");
