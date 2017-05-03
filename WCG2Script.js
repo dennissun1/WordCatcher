@@ -17,6 +17,7 @@ var s, total_num_sents, rng, iter=0;
 var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
+var speed = 0.2;
 
 
 var background = new Audio("background2.mp3");
@@ -70,13 +71,16 @@ function animate() {
         y=12;
     }
     x+=dx;
-    y+=.20;
+    y+=speed;
     catcher.style.right = x+"%";
     w1.style.top = y+"%";
     w2.style.top = y+"%";
     w3.style.top = y+"%";
     requestAnimFrame(animate);
 }
+function changeSpeed(s){
+    speed = s;
+}    
 
 function checkCorrect() {
     if(x<=67 && x>=64-w1.clientWidth/screen.availWidth*100) {
