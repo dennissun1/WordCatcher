@@ -20,7 +20,7 @@ var x=45, y=12, dx=0;
 
 var background = new Audio("background2.mp3");
 background.volume = 0.09;
-//var keypress = new Audio("click.mp3");
+
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
 
@@ -82,41 +82,40 @@ function animate() {
 function checkCorrect() {
     if(x<=67 && x>=64-w1.clientWidth/screen.availWidth*100) {
         if(s[rng].w1 == s[rng].correct) {
-                //alert("correct!");
+              
                 correct.play();
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
-                //alert("try again")
+               
             wrong.play();
     }
     if(x<=47 && x>=44-w2.clientWidth/screen.availWidth*100) {
         if(s[rng].w2 == s[rng].correct) {
-                //alert("correct!");
+                
                 correct.play();
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
-                //alert("try again")
             wrong.play();
     }
     if(x<=27 && x>=24-w3.clientWidth/screen.availWidth*100) {
         if(s[rng].w3 == s[rng].correct) {
-                //alert("correct!");
+               
                 correct.play();
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
-                //alert("try again")
+               
             wrong.play();
     } else {
-        //wrong.play();
+       
     }
 }
 
