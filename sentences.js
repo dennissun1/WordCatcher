@@ -19,7 +19,7 @@ var vocab = [    //array of sentences, note that part1 ends with space and part2
     {part1:"I felt ", part2:" after finishing my difficult homework.", w1:"accomplished", w2:"sad", w3:"drowsy", correct:"accomplished", explanation: "The correct answer is 'accomplished'. If we 'finished' homework, we wouldn't feel 'sad' or 'drowsy' because we completed the homework."},
     {part1:"The performers felt ", part2:" once they saw the huge audience.", w1:"quiet", w2:"calm", w3:"anxious", correct:"anxious", explanation: "The correct answer is 'anxious'. When performers see a huge audience, they feel nervous. The closes word to this is 'anxious'."},
     {part1:"The boy smelled the sweet ", part2:" of cookies that his mom baked.", w1:"aroma", w2:"nose", w3:"sight", correct:"aroma", explanation: "The correct answer is 'aroma'. 'Aroma' means a good smell. They boy can't smell his 'nose' or 'sight'."},
-    {part1:"Clothes are made from different ", part2:", such as cotton, leather, wool.", w1:"materials", w2:"length", w3:"sizes", correct:"material", explanation: "The correct answer is 'material'. Given the examples, cotton, leather, and wool, these are not 'length' or 'sizes'."},
+    {part1:"Clothes are made from different ", part2:", such as cotton, leather, wool.", w1:"materials", w2:"length", w3:"sizes", correct:"materials", explanation: "The correct answer is 'material'. Given the examples, cotton, leather, and wool, these are not 'length' or 'sizes'."},
     {part1:"I like listening to different ", part2:" of music. My favorite are classical, pop, and jazz.", w1:"sounds", w2:"plays", w3:"genres", correct:"genres", explanation: "The correct answer is 'genre'. Given the examples, classical, pop, and jazz, these are not 'sounds' or 'plays'."}
     ];
 
