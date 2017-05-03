@@ -1,2 +1,5 @@
 start from title.html, everything else should be click through
 I created a separate html file for each possible menu
+
+map for grammar w/ 2 degrees of freedom
+title->twodegrees->grammar->instructions(grammar2normal)->gameplay

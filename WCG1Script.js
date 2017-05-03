@@ -124,6 +124,7 @@ function loadSentence() {//updates webpage with new sentence
 
     textToSpeech(JSON.stringify(s[rng].part1+"_____"+s[rng].part2));
 
+
      if(hlitedCol.name == "leftCol") {
             textToSpeech(JSON.stringify(s[rng].w1));
         } else if (hlitedCol.name == "rightCol") {
