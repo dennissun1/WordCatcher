@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+    
+    <script type="application/javascript" src="sentences.js"></script>
+    <script type="application/javascript" src="WCG1Script.js"></script>
+    
 	<style>
 	.button {
 		background-color: #7BAFD4;
@@ -49,7 +53,7 @@
 		text-align: center;
 	}
 	</style>
-<head>
+<head id="header">
 	<title>Score</title>
 </head>
 <body>
@@ -62,4 +66,7 @@
 </form>
 	</div>
 </body>
+    <script>
+    document.getElementById("header").innerHTML = "<title>Score: " + score + " Points"; 
+    </script>
 </html>
