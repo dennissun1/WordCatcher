@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    
+	<style>
+	.button {
+		background-color: #7BAFD4;
+		border: none;
+		border-radius: 12px;
+		color: black;
+		padding: 20px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		font size: 16px;
+		margin: auto;
+		cursor: pointer;
+        width:auto;
+        
+		
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
+	}
+	.button1 {padding: 10px 24px;}
+		
+	.center{
+		margin: auto;
+	}
+	
+	h1.sansserif{
+		font-family: Quicksand;
+		font-size: 50px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;	
+		margin: auto;
+		width:90%;
+		text-align: center;
+	}
+	p.sansserif{
+		font-family: Quicksand;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
+		text-align: center;
+	}
+	</style>
+<head>
+	<title>Score</title>
+</head>
+<body>
+    <br/><br/>
+	<div class = "center">
+
+<h1 class = "sansserif" id = "Score">Score</h1>
+<p class = "sansserif" id = "Scoreboard">~Scoreboard goes here~</p>
+        
+<form action="title.html">
+	<button class="button button1">Play Again</button>
+</form>
+        
+	</div>
+</body>
+    <script>
+        document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("score") + " Points";
+        document.getElementById("Scoreboard").innerHTML = localStorage.getItem("loadedSents");
+    </script>
+</html>
