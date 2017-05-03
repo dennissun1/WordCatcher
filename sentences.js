@@ -23,7 +23,7 @@ var vocab = [    //array of sentences, note that part1 ends with space and part2
     {part1:"I like listening to different ", part2:" of music. My favorite are classical, pop, and jazz.", w1:"sounds", w2:"plays", w3:"genres", correct:"genres", explanation: "The correct answer is 'genre'. Given the examples, classical, pop, and jazz, these are not 'sounds' or 'plays'."}
     ];
 
-var GNNumSents = 10;
+var GNNumSents = 16;
 var grammar = [
     {part1:"Tina ", part2:" her two pet dogs.", w1:"and", w2:"at", w3:"a", correct:"and", explanation: "The correct answer is 'and'. Dogs are not a place and there are more than one."}, 
     {part1:"The red apple is ", part2:" on that tree.", w1:"growing", w2:"grew", w3:"grow", correct:"growing", explanation: "The correct answer is 'growing'. The key word is 'is' it is in present tense."}, 
@@ -35,7 +35,12 @@ var grammar = [
     {part1:"I ", part2:" many colorful pencils for class today.", w1:"have", w2:"has", w3:"had", correct:"have", explanation: "The correct answer is 'have'. The key word is 'today'. We need a word for the present tense."},
     {part1:"She ", part2:" his offer to drive her home.", w1:"accepted", w2:"excepted", w3:"exempted", correct:"accepted", explanation: "The correct answer is 'accepted'. 'Excepted' and 'exempted' have different meanings."},
     {part1:"There was a big storm with thunder and ", part2:".", w1:"lighting", w2:"lightening", w3:"lightning", correct:"lightning", explanation: "The correct answer is 'lightning'. 'Lighting' and 'lightening' have different meanings."}
-
+    {part1:"We ", part2:" on Thanksgiving Day.", w1:"feast", w2:"feasts", w3:"feastes", correct:"feast", explanation:"The correct answer is 'feast'. 'Feast' is the correct plural form of the noun."},
+    {part1:"My mom made many apple ", part2:" !", w1:"pie", w2:"pies", w3:"piees", correct:"pies", explanation:"The correct answer is 'pies'. The correct plural form of the noun is 'pies'."},
+    {part1:"We drove ", part2:" the concert hall.", w1:"too", w2:"two", w3:"to", correct:"to", explanation:"The correct answer is 'to'. These words are homonyms. 'To' is the correct use in this sentence."},
+    {part1:"Sally and Charles each have a cookie. There are ", part2:" cookies.", w1:"two", w2:"too", w3:"to", correct:"two", explanation:"The correct answer is 'two'. These words are homonyms. 'Two' is the correct use in this sentence."},
+    {part1:"Bring ", part2:" own pencil to class.", w1:"Your", w2:"You're", w3:"You", correct:"Your", explanation: "The correct answer is 'Your'. 'Your' makes sense here because it is possessive."},
+    {part1:"I love dogs ", part2:" I hate cats.", w1:"but", w2:"and", w3:"or", correct:"but", explanation: "The correct answer is 'but'. 'Love' and 'hate' are opposites. The word 'but' is used to show something that is contrasting."}
     ];
 
 
