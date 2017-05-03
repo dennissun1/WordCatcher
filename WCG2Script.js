@@ -22,7 +22,7 @@ var loadedSents = "";//really long string of wrong sentences - string array won'
 
 
 var background = new Audio("background.mp3");
-background.volume = 0.03;
+background.volume = 0.4;
 
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
