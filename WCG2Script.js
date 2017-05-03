@@ -18,11 +18,13 @@ var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
 
+
 var background = new Audio("background2.mp3");
 background.volume = 0.09;
 
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
+
 
 
 function dealWithKeyboardUp(e) {
@@ -58,10 +60,7 @@ function init(num, s) {//initializes total_num_sents on the first run
     w2.style.left = "50%";
     w3.style.left = "70%";
     catcher.style.top = "75%";
-
-
     loadSentence();
-    background.play();
     animate();
 }
 
@@ -82,13 +81,16 @@ function animate() {
 function checkCorrect() {
     if(x<=67 && x>=64-w1.clientWidth/screen.availWidth*100) {
         if(s[rng].w1 == s[rng].correct) {
+
               
                 correct.play();
+
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
+
                
             wrong.play();
     }
@@ -96,26 +98,31 @@ function checkCorrect() {
         if(s[rng].w2 == s[rng].correct) {
                 
                 correct.play();
+
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
+
             wrong.play();
     }
     if(x<=27 && x>=24-w3.clientWidth/screen.availWidth*100) {
         if(s[rng].w3 == s[rng].correct) {
                
                 correct.play();
+
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
             else
+
                
             wrong.play();
     } else {
        
+
     }
 }
 
@@ -129,19 +136,5 @@ function loadSentence() {//updates webpage with new sentence
     w1.innerHTML = "<h1>"+s[rng].w1+"</h1>";
     w2.innerHTML = "<h1>"+s[rng].w2+"</h1>";
     w3.innerHTML = "<h1>"+s[rng].w3+"</h1>";
-
-    textToSpeech(JSON.stringify(s[rng].part1+"_____"+s[rng].part2));
-    textToSpeech(JSON.stringify(s[rng].w1));
-    textToSpeech(JSON.stringify(s[rng].w2));
-    textToSpeech(JSON.stringify(s[rng].w3));
 }
 
-function textToSpeech(s)
-{
-    var msg = new SpeechSynthesisUtterance();
-     msg.text = s;
-     msg.lang = 'en-US';
-     msg.rate = 1.0;
-    
-     speechSynthesis.speak(msg);
-}
