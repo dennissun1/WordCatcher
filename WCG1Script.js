@@ -151,7 +151,7 @@ function textToSpeech(s)
     var msg = new SpeechSynthesisUtterance();
      msg.text = s;
      msg.lang = 'en-US';
-     msg.rate = 1.5;
+     msg.rate = 1.0;
     
      speechSynthesis.speak(msg);
 }
