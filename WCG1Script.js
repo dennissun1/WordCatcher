@@ -7,7 +7,7 @@ background.volume = 0.03;
 var keypress = new Audio("click.mp3");
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
-var loadedSents = new Array(10);
+var loadedSents = "";//really long string of wrong sentences - string array won't work well in localStorage
 
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
@@ -55,16 +55,18 @@ function dealWithKeyboard(e) {
             if(s[rng].w1 == s[rng].correct) {
                 var correct = new Audio("correct.mp3");
                 correct.play();
-                alert("correct!");
 
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
-
+                
                 loadSentence(); 
             }
             else {
                 var wrong = new Audio("wrong.mp3");
                 wrong.play();
+                
+                loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +         "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                loadSentence();
                 
             }
         }
@@ -75,13 +77,16 @@ function dealWithKeyboard(e) {
 
                 score+=10;
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
-
+                
                 loadSentence(); 
             }
             else {
-                 var wrong = new Audio("wrong.mp3");
-            wrong.play();
-           
+                var wrong = new Audio("wrong.mp3");
+                wrong.play();
+                
+                loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+                    "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                loadSentence();
             }
         }
         if(hlitedCol.name == "rightCol") {
@@ -93,12 +98,16 @@ function dealWithKeyboard(e) {
                 score+=10;
 
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
+                
                 loadSentence(); 
             }
             else {
                 var wrong = new Audio("wrong.mp3");
-            wrong.play();
-            
+                wrong.play();
+                
+                loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+                    "   c) " + s[rng].w3 + ".<br/> " + s[rng].explanation + "<br/><br/>";
+                loadSentence();
             }
         }
     }
@@ -114,11 +123,13 @@ function init(num, s) {//initializes total_num_sents on the first run
 function loadSentence() {//updates webpage with new sentence
     iter++;
     if(iter == 10) {
+        localStorage.setItem("score", score);
+        localStorage.setItem("loadedSents", loadedSents);
         window.location.href = "scoreScreen.html";
     }
     
     rng = Math.floor((Math.random() * total_num_sents)); //random int from 0 to # of sentences-1
-    loadedSents[iter] = {sent:s[rng], isCorrect:true};
+    
     document.getElementById("gameHeader").innerHTML = "<h1>"+s[rng].part1+"_____"+s[rng].part2+"</h1>";
     var t = s[rng].part1+"_____"+s[rng].part2;
     document.getElementById("myTable").rows[0].innerHTML = "<th>"+s[rng].w1+"</th><th>"+s[rng].w2+"</th><th>"+s[rng].w3+"</th>";
