@@ -43,14 +43,13 @@
 		
 		.button2:hover {background-color: #bfbfbf;}
 	.button3 {
-		background-color: white; 
+		background-color: white;
 		color: black;
 		border: 2px solid #e7e7e7;
 		padding: 10px 24px;}
 		
 		.button3:hover {background-color: #bfbfbf;}
-
-	.button4 {
+		.button4 {
 		background-color: white;
 		border: none;
 		border-radius: 12px;
@@ -76,6 +75,7 @@
 		
 	.center{
 		margin: auto;
+		width: 15%;
 	}
 	
 	h1.sansserif{
@@ -106,6 +106,7 @@
 	
 
 	<body bgcolor = "#7BAFD4">
+		
 	<center>
         <br/><br/><br/>
 		<h1 class="sansserif">WordCatcher</h1>
@@ -123,17 +124,16 @@
         <form action="teachingtools.html">
             <button class = "button button3">Custom Sentences</button>
         </form>    
+        <button class = "button4" onclick="playAndPauseMusic()">Play/Pause Music</button>
         
- <button class = "button4" onclick="playAndPauseMusic()">Play/Pause Music</button>
-        
-		</div>
+ 		</div>
 	</center>
 
 	<audio autoplay loop id="background">
 		<source src="background.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
-	</body>
+ 	</body>
 
 	<script>
 		function playAndPauseMusic()
