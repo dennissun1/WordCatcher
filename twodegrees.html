@@ -12,6 +12,8 @@
 		display: inline-block;
 		font size: 16px;
 		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
 		cursor: pointer;
 		
 		width:175px;
@@ -24,12 +26,22 @@
 		font-weight: 500;
 		line-height: 26px;
 	}
-	.button1 {padding: 10px 24px;}
-	.button2 {padding: 10px 24px;}
+	.button1 {
+		background-color: white; 
+		color: black;
+		border: 2px solid #bfbfbf;
+		padding: 10px 24px;}
+		.button1:hover {background-color: #bfbfbf;}
 		
+	.button2 {
+		background-color: white; 
+		color: black;
+		border: 2px solid #bfbfbf;
+		padding: 10px 24px;}
+		.button2:hover {background-color: #bfbfbf;}
+
 	.center{
 		margin: auto;
-		width: 15%;
 	}
 	
 	h1.sansserif{
@@ -58,6 +70,7 @@
 	<title>Game Type</title>
 </head>
 <body bgcolor="#7BAFD4">
+	<center>
 	<br/><br/><br/>
 	<h1 class = "sansserif">Game Type</h1>
 	<div class = "center">
@@ -71,5 +84,6 @@
 		<button class="button button2">Vocabulary</button>
 	</form>
 	</div>	
+	</center>	
 </body>
 </html>
