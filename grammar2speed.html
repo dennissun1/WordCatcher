@@ -86,6 +86,19 @@
 		width:90%;
 		text-align: center;
 	}
+		
+	h2.sansserif{
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;	
+		margin: auto;
+		width:90%;
+		text-align: center;
+	}
+		
 	p.sansserif{
 		font-family: Quicksand;
 		font-size: 24px;
@@ -112,7 +125,16 @@
   	<input id="clickMe" type="button" value="4" onclick="changeSpeed(0.35);window.location.href= 'grammar2instructions.html'" />
   	<input id="clickMe" type="button" value="5" onclick="changeSpeed(0.4);window.location.href= 'grammar2instructions.html'" />
 
+	<h2 class = "sansserif">Text to Speech is ON by default</h2>
+	<button class="button6" onclick="speechOff()" >Turn OFF</button>
 	</div>
 	</center>	
 </body>
+
+<script>
+	//default text to speech on
+	if (speech==1) {	
+		speechOn();
+	}
+</script>
 </html>
