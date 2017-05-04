@@ -89,21 +89,20 @@
 	</form>
 	<form action="vocab1instructions.html">
 		<button class="button button2">Vocabulary</button>
-	</form>	
-	<form>
-		<button onclick = "checkIfCustomSents()" class="button button3">Custom</button>
-	</form>   
-     
+	</form>
+        <button onclick="checkIfCustomSents()" class="button button3">Custom</button>
+        
+        
         
 	</div>	
 	</center>
 	<script>
 		function checkIfCustomSents() {
-			if(localStorage.getItem("customSents")==null) {
-				alert("You have no custom sentences!\nPlease go back and create some");
+			if(localStorage.getItem("customSents")!=null) {
+                window.location.href = "custom1instructions.html";
 			}
 			else{
-				window.location.href = "custom1instructions.html";
+				alert("You have no custom sentences!\nPlease go back and create some");
 			}
 		}
 	</script>

@@ -90,10 +90,22 @@
 	<form action="vocab2speed.html">
 		<button class="button button2">Vocabulary</button>
 	</form>
-    <form action="custom2speed.html">
-		<button class="button button3">Custom</button>
-	</form>
+
+        <button onclick = "checkIfCustomSents()" class="button button3">Custom</button>
+
 	</div>
 	</center>	
+    
+    <script>
+		function checkIfCustomSents() {
+			if(localStorage.getItem("customSents")!=null) {
+                window.location.href = "custom2speed.html";
+			}
+			else{
+				alert("You have no custom sentences!\nPlease go back and create some");
+			}
+		}
+	</script>
+    
 </body>
 </html>
