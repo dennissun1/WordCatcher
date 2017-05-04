@@ -4,6 +4,31 @@
   <script type = "application/javascript" src="WCG2Script.js"></script>
 
 	<style>
+	.button6 {
+		background-color: white;
+		border: none;
+		border-radius: 12px;
+		color: black;
+		padding: 10px 16px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 16px;
+		
+		width: 175px;	
+	}	
+	
 	.button {
 		background-color: #FFFFFF;
 		border: none;
@@ -99,6 +124,7 @@
         <br/><br/><br/>
 
 	<h1 class= "sansserif">Speed</h1>
+	<br><br><br><br><br>
 	<div class = "center">
 	<p class = "sansserif">Select a speed choice.</p>
 	<input id="clickMe" type="button" value="1" onclick="changeSpeed(0.2);window.location.href= 'vocab2instructions.html'" />
@@ -106,9 +132,16 @@
  	<input id="clickMe" type="button" value="3" onclick="changeSpeed(0.3);window.location.href= 'vocab2instructions.html'" />
  	<input id="clickMe" type="button" value="4" onclick="changeSpeed(0.35);window.location.href= 'vocab2instructions.html'" />
  	<input id="clickMe" type="button" value="5" onclick="changeSpeed(0.4);window.location.href= 'vocab2instructions.html'" />
-
-
+	<br><br><br><br><br>
+	<h2 class = "sansserif">Text to Speech is ON by default</h2>
+	<button class="button6" onclick="speechOff()" >Turn OFF</button>
 	</div>
 	</center>	
 </body>
+<script>
+	//default text to speech on
+	if (speech==1) {	
+		speechOn();
+	}
+</script>
 </html>
