@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script type = "application/javascript" src="WCG1Script.js"></script>
 
 	<style>
 	.button {
@@ -35,6 +36,30 @@
 		
 		.button1:hover {background-color: #bfbfbf;}
 
+	.button6 {
+		background-color: white;
+		border: none;
+		border-radius: 12px;
+		color: black;
+		padding: 10px 16px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 16px;
+		
+		width: 175px;	
+	}
 		
 	.center{
 		margin: auto;
@@ -51,6 +76,19 @@
 		width:90%;
 		text-align: center;
 	}
+
+	h2.sansserif{
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;	
+		margin: auto;
+		width:90%;
+		text-align: center;
+	}
+
 	p.sansserif{
 		font-family: Quicksand;
 		font-size: 24px;
@@ -69,12 +107,26 @@
 	<br/><br/><br/>
 
 	<h1 class = "sansserif">Instructions</h1>
+	<br><br><br><br>
 	<div class = "center">
 	<p class = "sansserif">Listen to the sentence. Fill in the 'blank' by using your arrow keys to select the correct word and hit the Enter key. Catch em words!</p>
+	<br><br><br><br><br>
+	<h2 class="sansserif">Text to speech is OFF by default.</h2>
+	<button class="button6" onclick="speechOn()" >Turn ON</button>
+	<br><br><br><br><br>
+
 	<form action ="Gameplay_1Degree_Grammar_Norm.html">
 		<button class = button button1>Continue to gameplay</button>
 	</form>
 	</div>
 	</center>	
 </body>
+
+<script>
+	//default text to speech off
+	if (speech==0) {	
+		speechOff();
+	}
+</script>
+
 </html>
