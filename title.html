@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <audio><embed src="background.mp3" loop="true" hidden="true" autostart="true"></audio>
 	<style>
 	.button {
 		background-color: white;
@@ -41,7 +42,6 @@
 		padding: 10px 24px;}
 		
 		.button2: hover {background-color: #e7e7e7;}
-
 		
 	.center{
 		margin: auto;
@@ -72,12 +72,11 @@
 	
 	<head>
 		<title>WordCatcher</title>
-		<script type="text/javascript" src = "script.js"></script>
 	</head>
-
 	
 
 	<body bgcolor = "#7BAFD4">
+
         <br/><br/><br/>
 		<h1 class="sansserif">WordCatcher</h1>
 		<div class = "center">
@@ -85,12 +84,16 @@
 		<p class = "sansserif">Welcome to WordCatcher!</p>
 		<p class = "sansserif">Choose Degrees of Freedom</p>
 		<form action="twodegrees.html">
-			<button class="button button1">One Degree of Freedom
-			</button>
+			<button class="button button1">Relax Mode</button>
 		</form>
 		<form action="threedegrees.html">
-			<button class = "button button2">Two Degrees of Freedom</button>
+			<button class = "button button2">Timed Mode</button>
 		</form>
+            
+        <form action="teachingtools.html">
+            <button class = "button button3">Custom Sentences</button>
+        </form>    
+        
 		</div>
 	</body>
 </html>
