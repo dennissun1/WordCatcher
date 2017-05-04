@@ -21,7 +21,7 @@ var speed = 0.2;
 var loadedSents = "";//really long string of wrong sentences - string array won't work well in localStorage
 
 
-var background = new Audio("background.mp3");
+var background = new Audio("background2.mp3");
 background.volume = 0.4;
 
 var correct = new Audio("correct.mp3");
