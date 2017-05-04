@@ -28,6 +28,7 @@ var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
 
 
+var speech = Number(localStorage.getItem("speech"));
 
 function dealWithKeyboardUp(e) {
     if(e.keyCode == 37) {//left arrowkey
@@ -100,7 +101,7 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
     }
@@ -118,7 +119,7 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
                 
@@ -132,14 +133,14 @@ function checkCorrect() {
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
-    }
-     
-    wrong.play();
+        else {
+            wrong.play();
         
-    loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-        "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
-    loadSentence();   
-    
+            loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+            loadSentence();   
+        }
+    }
 }
 
 function loadSentence() {//updates webpage with new sentence
@@ -160,10 +161,25 @@ function loadSentence() {//updates webpage with new sentence
 
 function textToSpeech(s)
 {
+
+    if (speech == 0){
     var msg = new SpeechSynthesisUtterance();
      msg.text = s;
      msg.lang = 'en-US';
      msg.rate = 1.0;
     
      speechSynthesis.speak(msg);
+ }
+}
+
+function speechOff()
+{
+    speech = localStorage.setItem("speech", 1);
+    //"Text to Speech is OFF");
+}
+
+function speechOn()
+{
+    speech = localStorage.setItem("speech", 0);
+    //"Text to Speech is ON");
 }
