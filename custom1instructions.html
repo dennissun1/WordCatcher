@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<style>
-	.button {
-		background-color: #FFFFFF;
+	
+	.button1 {
+		background-color: white;
 		border: none;
 		border-radius: 12px;
 		color: black;
@@ -10,8 +11,36 @@
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
-		font size: 16px;
+		font-size: 16px;
+		margin: 8px 4px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		
+		font-family: Quicksand;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 16px;
+		width: 300px;
+		height: 100px;}
+		
+		.button1:hover {background-color: #bfbfbf;}
+		
+	.button6 {
+		background-color: white;
+		border: none;
+		border-radius: 12px;
+		color: black;
+		padding: 10px 16px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
 		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
 		cursor: pointer;
 		
 		font-family: Quicksand;
@@ -19,12 +48,11 @@
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 500;
-		line-height: 26px;
+		line-height: 16px;
 		
-		width: 175px;
-		height: 100px;
+		width: 175px;	
 	}
-	.button1 {padding: 10px 24px;}
+		.button6:hover {background-color: #bfbfbf;}	
 		
 	.center{
 		margin: auto;
@@ -61,10 +89,20 @@
 	<h1 class = "sansserif">Instructions</h1>
 	<div class = "center">
 	<p class = "sansserif">Listen to the sentence. Fill in the 'blank' by using your arrow keys to select the correct word and hit the Enter key. Catch em words!</p>
+	<br><br><br><br><br>
+	<h2 class="sansserif">Text to speech is OFF by default.</h2>
+	<button class="button button6" onclick="speechOn()" >Turn ON</button>
+	<br><br><br><br><br>
 	<form action ="Gameplay_1Degree_Custom.html">
-		<button class = button button1>Continue to gameplay</button>
+		<button class = "button button1">Click here to play!</button>
 	</form>
 	</div>
 	</center>	
 </body>
+	<script>
+	//default text to speech off
+	if (speech==0) {	
+		speechOff();
+	}
+</script>
 </html>
