@@ -155,7 +155,7 @@ function loadSentence() {//updates webpage with new sentence
     w2.innerHTML = "<h1>"+s[rng].w2+"</h1>";
     w3.innerHTML = "<h1>"+s[rng].w3+"</h1>";
     
-    textToSpeech(JSON.stringify(s[rng].part1+"_____"+s[rng].part2));
+    textToSpeech(JSON.stringify(s[rng].part1+" blank "+s[rng].part2));
 }
 
 function textToSpeech(s)
