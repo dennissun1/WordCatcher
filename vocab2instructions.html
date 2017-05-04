@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
 	<style>
 	.button {
 		background-color: #FFFFFF;
@@ -10,11 +9,10 @@
 		padding: 20px 32px;
 		text-align: center;
 		text-decoration: none;
-		display: block;
+		display: inline-block;
 		font size: 16px;
-		margin: auto;
+		margin: 4px 2px;
 		cursor: pointer;
-        
 		
 		font-family: Quicksand;
 		font-size: 16px;
@@ -30,6 +28,7 @@
 		
 	.center{
 		margin: auto;
+		width: 15%;
 	}
 	
 	h1.sansserif{
@@ -54,27 +53,17 @@
 	}
 	</style>
 <head>
-	<title>Score</title>
+	<title>Instructions</title>
 </head>
 <body bgcolor="#7BAFD4">
-    <br/><br/>
-	<div class = "center">
+        <br/><br/><br/>
 
-<h1 class = "sansserif" id = "Score">Score</h1>
-<p class = "sansserif" id = "Scoreboard">~Scoreboard goes here~</p>
-        
-<form action="title.html">
-	<button class="button button1">Play Again</button>
-</form>
-        
+	<h1 class = "sansserif">Instructions</h1>
+	<div class = "center">
+	<p class = "sansserif">Listen to the sentence. Use the arrow keys to move the avatar under the correct word to fill in the 'blank'. Catch em words!</p>
+	<form action ="Gameplay_2Degree_Vocab_Norm.html">
+		<button class = button button1>Continue to gameplay</button>
+	</form>	
 	</div>
 </body>
-    <script>
-        if(localStorage.getItem("score") == "100"){
-            document.getElementById("Score").innerHTML = "You got everything correct! You're a master Catcher!"
-        }else{
-            document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("score") + " Points";
-        }
-        document.getElementById("Scoreboard").innerHTML = localStorage.getItem("loadedSents");
-    </script>
 </html>

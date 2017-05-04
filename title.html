@@ -3,16 +3,18 @@
     <audio><embed src="background.mp3" loop="true" hidden="true" autostart="true"></audio>
 	<style>
 	.button {
-		background-color: #7BAFD4;
+		background-color: white;
 		border: none;
 		border-radius: 12px;
-		color: black;
+		color: white;
 		padding: 20px 32px;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
-		font size: 16px;
+		font-size: 16px;
 		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
 		cursor: pointer;
 		
 		font-family: Quicksand;
@@ -21,10 +23,25 @@
 		font-variant: normal;
 		font-weight: 500;
 		line-height: 26px;
+		
+		width: 175px;
+		height: 100px;
 	}
-	.button1 {padding: 10px 24px;}
-	.button2 {padding: 10px 24px;}
-    .button3 {padding: 10px 24px;}
+	.button1 {
+		background-color: white; 
+		color: black;
+		border: 2px solid #e7e7e7;
+		padding: 10px 24px;}
+		
+		.button1: hover {background-color: #e7e7e7;}
+		
+	.button2 {
+		background-color: white; 
+		color: black;
+		border: 2px solid #e7e7e7;
+		padding: 10px 24px;}
+		
+		.button2: hover {background-color: #e7e7e7;}
 		
 	.center{
 		margin: auto;
@@ -57,7 +74,9 @@
 		<title>WordCatcher</title>
 	</head>
 	
-	<body>
+
+	<body bgcolor = "#7BAFD4">
+
         <br/><br/><br/>
 		<h1 class="sansserif">WordCatcher</h1>
 		<div class = "center">
