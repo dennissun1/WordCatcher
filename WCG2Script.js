@@ -27,7 +27,6 @@ background.volume = 0.4;
 var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
 
-
 var speech = Number(localStorage.getItem("speech"));
 
 function dealWithKeyboardUp(e) {
@@ -101,11 +100,11 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
     }
-    if(x<=47 && x>=44-w2.clientWidth/screen.availWidth*100) {
+    else if(x<=47 && x>=44-w2.clientWidth/screen.availWidth*100) {
         if(s[rng].w2 == s[rng].correct) {
                 
                 correct.play();
@@ -119,12 +118,12 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
                 
     }
-    if(x<=27 && x>=24-w3.clientWidth/screen.availWidth*100) {
+    else if(x<=27 && x>=24-w3.clientWidth/screen.availWidth*100) {
         if(s[rng].w3 == s[rng].correct) {
                
                 correct.play();
@@ -137,9 +136,16 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
+    }
+    else{
+    wrong.play();
+        
+    loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+            "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
+    loadSentence();  
     }
 }
 
