@@ -17,7 +17,7 @@ var s, total_num_sents, rng, iter=-1;
 var score = 0;
 var catcher, words, w1, w2, w3;
 var x=45, y=12, dx=0;
-var speed = 0.2;
+var speed = Number(localStorage.getItem("speed"));
 var loadedSents = "";//really long string of wrong sentences - string array won't work well in localStorage
 
 
