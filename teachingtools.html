@@ -54,6 +54,15 @@
 		line-height: 26px;
 		text-align: center;
 	}
+	#input.sansserif{
+		font-family: Quicksand;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
+		text-align: center;
+	}
 	</style>
 	
 	<head>
@@ -69,7 +78,8 @@
 		
 		<p class = "sansserif">Welcome to the WordCatcher creation menu!</p>
 		<p class = "sansserif">Create your own sentences below!</p>
-            
+			
+            <div id ="input">
             Before the blank: <input type="text" id="part1" value="The cat"><br>
             After the blank: <input type="text" id="part2" value="in the box."><br>
             Answer 1: <input type="text" id="w1" value="sat"><br>
@@ -77,6 +87,7 @@
             Answer 3: <input type="text" id="w3" value="mouse"><br>
             Correct Answer: <input type="text" id="correct" value="sat"><br>
             Explanation: <input type="text" id="explanation" value="explain the answer here"><br><br>
+	    </div>
             
             <button onclick = "saveSent()" class="button">Save Sentence</button>
             
