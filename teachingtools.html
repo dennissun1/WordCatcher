@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    
+    
+    <audio><embed src="background.mp3" loop="true" hidden="true" autostart="true"></audio>
+	<style>
+	.button {
+		background-color: #7BAFD4;
+		border: none;
+		border-radius: 12px;
+		color: black;
+		padding: 20px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		width: 200px;
+        height: 50px;
+        
+		font-family: Quicksand;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
+        padding: 10px 24px;
+	}
+        
+		
+	.center{
+		margin: auto;
+	}
+        
+	
+	h1.sansserif{
+		font-family: Quicksand;
+		font-size: 50px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;	
+		margin: auto;
+		width:90%;
+		text-align: center;
+	}
+	p.sansserif{
+		font-family: Quicksand;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26px;
+		text-align: center;
+	}
+	</style>
+	
+	<head>
+		<title>WordCatcher</title>
+		<script type="application/javascript" src = "sentences.js"></script>
+	</head>
+
+    
+	<body><center>
+        <br/><br/><br/>
+		<h1 class="sansserif">WordCatcher</h1>
+		<div class = "center">
+		
+		<p class = "sansserif">Welcome to the WordCatcher creation menu!</p>
+		<p class = "sansserif">Create your own sentences below!</p>
+            
+            Before the blank: <input type="text" id="part1" value="The cat"><br>
+            After the blank: <input type="text" id="part2" value="in the box."><br>
+            Answer 1: <input type="text" id="w1" value="sat"><br>
+            Answer 2: <input type="text" id="w2" value="licked"><br>
+            Answer 3: <input type="text" id="w3" value="mouse"><br>
+            Correct Answer: <input type="text" id="correct" value="sat"><br>
+            Explanation: <input type="text" id="explanation" value="explain the answer here"><br><br>
+            
+            <button onclick = "saveSent()" class="button">Save Sentence</button>
+            
+            <form action = "title.html">
+                <button class="button">Done Creating</button>
+            </form>
+            
+            <button onclick = "clearSents()" class="button">Clear all sentences</button>
+		</div>
+        </center>
+	</body>
+</html>
+

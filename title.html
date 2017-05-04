@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <audio><embed src="background.mp3" loop="true" hidden="true" autostart="true"></audio>
 	<style>
 	.button {
 		background-color: #7BAFD4;
@@ -23,6 +24,7 @@
 	}
 	.button1 {padding: 10px 24px;}
 	.button2 {padding: 10px 24px;}
+    .button3 {padding: 10px 24px;}
 		
 	.center{
 		margin: auto;
@@ -53,11 +55,8 @@
 	
 	<head>
 		<title>WordCatcher</title>
-		<script type="text/javascript" src = "script.js"></script>
 	</head>
-
 	
-
 	<body>
         <br/><br/><br/>
 		<h1 class="sansserif">WordCatcher</h1>
@@ -66,12 +65,16 @@
 		<p class = "sansserif">Welcome to WordCatcher!</p>
 		<p class = "sansserif">Choose Degrees of Freedom</p>
 		<form action="twodegrees.html">
-			<button class="button button1">One Degree of Freedom
-			</button>
+			<button class="button button1">Relax Mode</button>
 		</form>
 		<form action="threedegrees.html">
-			<button class = "button button2">Two Degrees of Freedom</button>
+			<button class = "button button2">Timed Mode</button>
 		</form>
+            
+        <form action="teachingtools.html">
+            <button class = "button button3">Custom Sentences</button>
+        </form>    
+        
 		</div>
 	</body>
 </html>
