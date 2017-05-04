@@ -9,6 +9,8 @@ var correct = new Audio("correct.mp3");
 var wrong = new Audio("wrong.mp3");
 var loadedSents = "";//really long string of wrong sentences - string array won't work well in localStorage
 
+var speech = Number(localStorage.getItem("speech"));
+
 function dealWithKeyboard(e) {
     if(e.keyCode == 37) {//left arrowkey
  
@@ -148,11 +150,24 @@ function loadSentence() {//updates webpage with new sentence
 
 function textToSpeech(s)
 {
+    if (speech == 0){
     var msg = new SpeechSynthesisUtterance();
      msg.text = s;
      msg.lang = 'en-US';
      msg.rate = 1.0;
     
      speechSynthesis.speak(msg);
+ }
+}
+function speechOff()
+{
+    speech = localStorage.setItem("speech", 1);
+    //alert("Text to Speech is OFF");
+}
+
+function speechOn()
+{
+    speech = localStorage.setItem("speech", 0);
+   alert("Text to Speech is ON");
 }
 

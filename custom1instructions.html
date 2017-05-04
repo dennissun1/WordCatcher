@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script type = "application/javascript" src="custom1Script.js"></script>
 	<style>
 	
 	.button1 {
@@ -52,8 +53,9 @@
 		
 		width: 175px;	
 	}
+
 		.button6:hover {background-color: #bfbfbf;}	
-		
+    
 	.center{
 		margin: auto;
 	}
@@ -69,6 +71,7 @@
 		width:90%;
 		text-align: center;
 	}
+
 	h2.sansserif{
 		font-family: Quicksand;
 		font-size: 16px;
@@ -80,6 +83,7 @@
 		width:90%;
 		text-align: center;
 	}	
+
 	p.sansserif{
 		font-family: Quicksand;
 		font-size: 24px;
@@ -98,11 +102,13 @@
         <br/><br/><br/>
 
 	<h1 class = "sansserif">Instructions</h1>
+	<br><br><br><br>
 	<div class = "center">
 	<p class = "sansserif">Listen to the sentence. Fill in the 'blank' by using your arrow keys to select the correct word and hit the Enter key. Catch em words!</p>
 	<br><br><br><br><br>
 	<h2 class="sansserif">Text to speech is OFF by default.</h2>
 	<button class="button button6" onclick="speechOn()" >Turn ON</button>
+
 	<br><br><br><br><br>
 	<form action ="Gameplay_1Degree_Custom.html">
 		<button class = "button button1">Click here to play!</button>
@@ -110,7 +116,8 @@
 	</div>
 	</center>	
 </body>
-	<script>
+
+<script>
 	//default text to speech off
 	if (speech==0) {	
 		speechOff();
