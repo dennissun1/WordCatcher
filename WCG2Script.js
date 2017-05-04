@@ -175,7 +175,7 @@ function textToSpeech(s)
 function speechOff()
 {
     speech = localStorage.setItem("speech", 1);
-    //"Text to Speech is OFF");
+    alert("Text to Speech is OFF");
 }
 
 function speechOn()
