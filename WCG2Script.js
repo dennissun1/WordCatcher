@@ -81,7 +81,8 @@ function animate() {
     requestAnimFrame(animate);
 }
 function changeSpeed(s){
-    speed = s;
+    
+    speed = localStorage.setItem("speed", s);
 }    
 
 function checkCorrect() {
