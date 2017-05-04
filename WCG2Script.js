@@ -100,7 +100,7 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
     }
@@ -118,7 +118,7 @@ function checkCorrect() {
             wrong.play();
         
             loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
+                  "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
             loadSentence();   
         }
                 
@@ -132,14 +132,14 @@ function checkCorrect() {
                 document.getElementById("foot").innerHTML = "<h1>Score: "+score+"</h1>";
                 loadSentence(); 
             }
-        else {
-            wrong.play();
-        
-            loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
-                  "   c) " + s[rng].w3 + ".<br/>" + s[rng].explanation + "<br/><br/>";
-            loadSentence();   
-        }
     }
+     
+    wrong.play();
+        
+    loadedSents += s[rng].part1 + "_____" + s[rng].part2 + "<br/>a) " + s[rng].w1 + "   b) " + s[rng].w2 +
+        "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
+    loadSentence();   
+    
 }
 
 function loadSentence() {//updates webpage with new sentence
