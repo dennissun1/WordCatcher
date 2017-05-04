@@ -90,13 +90,23 @@
 	<form action="vocab1instructions.html">
 		<button class="button button2">Vocabulary</button>
 	</form>
-    <form action="custom1instructions.html">
+    <form action="checkIfCustomSents()">
 		<button class="button button3">Custom</button>
 	</form>   
         
         
         
 	</div>	
-	</center>	
+	</center>
+	<script>
+		function checkIfCustomSents() {
+			if(localStorage.getItem("customSents")==null) {
+				alert("You have no custom sentences!\nPlease go back and create some");
+			}
+			else{
+				window.location.href = "custom1instructions.html";
+			}
+		}
+	</script>
 </body>
 </html>
