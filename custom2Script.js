@@ -139,8 +139,8 @@ function checkCorrect() {
         "   c) " + s[rng].w3 + "<br/>" + s[rng].explanation + "<br/><br/>";
     loadSentence();   
         
-    }
 }
+
 
 function loadSentence() {//updates webpage with new sentence
     iter++;
